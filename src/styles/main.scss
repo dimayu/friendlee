@@ -1,5 +1,6 @@
 @import "base/_general.scss";
 @import "base/_fonts.scss";
+@import "helpers/_variables.scss";
 @import "smart-grid.scss";
 @import "../blocks/modules.scss";
 
@@ -8,12 +9,16 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nekst', sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
+  color: $black;
   line-height: 1;
   letter-spacing: -0.02px;
-  background-color: #ffffff;
+  background-color: #fff;
   overflow-x: hidden;
+}
+
+.calculator {
+  padding: 213px 0;
 }
