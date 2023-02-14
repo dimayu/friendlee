@@ -1,0 +1,59 @@
+.filter-price {
+  &__slider {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    &.noUi-horizontal {
+      height: 3px;
+      background-color: #D7DEE4;
+      border: none;
+      box-shadow: none;
+    }
+
+    .noUi-connect {
+      background-color: #fdcf6d;
+    }
+
+    .noUi-handle-lower {
+      right: -10px !important;
+    }
+
+    .noUi-handle-upper {
+      right: 0 !important; // смещение влево, было -17px
+    }
+
+    .noUi-handle {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background:  #ff8a02;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      cursor: pointer;
+
+      top: -4px; // выравнивание по центру полосы
+
+      &::after,
+      &::before {
+        display: none;
+        width: auto;
+        height: auto;
+        background: transparent;
+        left: auto;
+        top: auto;
+      }
+
+      &.noUi-handle-lower::before,
+      &.noUi-handle-upper::before {
+        display: block;
+        font-size: 12px;
+        top: -14px;
+        color: #565b61;
+      }
+
+      &.noUi-handle-lower::before {content: 'от';}
+      &.noUi-handle-upper::before {content: 'до';}
+    };
+  }
+}
