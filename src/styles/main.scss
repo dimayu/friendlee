@@ -11,7 +11,7 @@
 body {
   font-family: 'Nekst', sans-serif;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: $black;
   line-height: 1;
   letter-spacing: -0.02px;
@@ -19,6 +19,66 @@ body {
   overflow-x: hidden;
 }
 
+.btn {
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: $yellow;
+  border: none;
+  font-family: 'Nekst', sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $black;
+  }
+
+  &:disabled {
+    background: rgba(255, 149, 20, 0.4);
+  }
+}
+
 .calculator {
-  padding: 213px 0;
+  padding: 220px 0;
+
+  &__title {
+    margin-bottom: 26px;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 90%;
+  }
+
+  &__items {
+    @include row-flex();
+  }
+}
+
+.result-items {
+  @include row-flex();
+  margin-top: 54px;
+
+  &__item {
+    @include col();
+    @include size(4);
+
+    &--title {
+      margin-bottom: 16px;
+      font-family: 'Gilroy', sans-serif;
+      line-height: 20px;
+      color: $grey;
+    }
+
+    &--price {
+      font-size: 54px;
+      line-height: 90%;
+    }
+  }
+
+  .btn {
+    margin-top: 6px;
+  }
 }

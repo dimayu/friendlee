@@ -3,9 +3,13 @@
 		@@input-title
 	</span>
   <div class="calculator-input__value">
-    <div id="inputRange">
-      <input type="number" step="@@step" min="@@min" max="@@max" placeholder="@@value" id="min" >
-    </div>
+      <input type="number"
+             step="@@step"
+             min="@@min"
+             max="@@max"
+             placeholder="@@value" id="min"
+             class="calculator-input__value--number"
+      >
     @@if(context.unit) {
     <span class="calculator-input__value--unit">
 				@@unit
@@ -16,8 +20,11 @@
 				@@label
     </span>
     }
-    <div id="sliderBox">
-      <input type="range" id="slider0to50" step="@@step" min="@@min" max="@@max">
-    </div>
+      <input type="range"
+             id="slider0to50"
+             step="@@step"
+             min="@@min" max="@@max"
+             class="calculator-input__value--range"
+      >
   </div>
 </div>

@@ -35,7 +35,7 @@
   <section class="calculator">
     <div class="wrapper">
       <form action="" class="calculator__form">
-        <h2>Рассчитайте стоимость автомобиля в лизинг</h2>
+        <h2 class="calculator__title">Рассчитайте стоимость<br>автомобиля в лизинг</h2>
         <div class="calculator__items">
           @@include("../blocks/modules/calculator-input/calculator-input.html", {
           "input-title": "Стоимость автомобиля",
@@ -52,7 +52,6 @@
           "max": "2600000",
           "value": "420000",
           "step": "5000",
-          "unit": "₽",
           "label": "13%",
           })
 
@@ -74,7 +73,7 @@
             <p class="result-items__item--title">Ежемесячный платеж от</p>
             <p class="result-items__item--price">114 455 ₽</p>
           </div>
-          <button class="btn">Оставить заявку</button>
+          <button class="result-items__item btn">Оставить заявку</button>
         </div>
       </form>
     </div>
