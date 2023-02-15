@@ -1,34 +1,18 @@
-// slider();
-//
-//
-// function slider(){
-//     const range = document.getElementsByClassName('price-slider-range');
-//     const max = Math.max(range[0].value, range[1].value);
-//     document.getElementById('price-slider-paragraph').innerHTML = `${max}`;
-//
-//     const progress = document.getElementById('price-progress');
-//     progress.style.setProperty('--max', max);
-// }
-//
-// const range = document.querySelectorAll('input[type=range]')
-//
-// range.forEach((r)=>{
-//     r.addEventListener('mousemove', ()=>{
-//         slider();
-//     });
-// });
+const itemsSlide = document.querySelectorAll(".calculator-input");
 
-
-let sliderLeft=document.getElementById("slider0to50");
-let inputMin=document.getElementById("min");
-
-function sliderLeftInput(){
-    sliderLeft.value=inputMin.value;
-}
-
-inputMin.addEventListener("change",sliderLeftInput);
-
-function inputMinSliderLeft(){
-    inputMin.value=sliderLeft.value;
-}
-sliderLeft.addEventListener("change",inputMinSliderLeft);
+itemsSlide.forEach((item) => {
+    let slider = item.querySelector(".calculator-input__value--range");
+    let input = item.querySelector(".calculator-input__value--number");
+    
+    function sliderInput() {
+        slider.value = input.value;
+    }
+    
+    input.addEventListener("change", sliderInput);
+    
+    function inputSlider() {
+        input.value = slider.value;
+    }
+    
+    slider.addEventListener("change", inputSlider);
+});
