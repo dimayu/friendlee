@@ -33,6 +33,12 @@ body {
   color: #fff;
   cursor: pointer;
 
+  @include sm-block() {
+    height: 60px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+
   &:hover {
     background-color: $black;
   }
@@ -55,15 +61,38 @@ body {
   &__items {
     @include row-flex();
   }
+
+  @include md-block() {
+    padding: 70px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include sm-block() {
+    padding: 48px 0;
+
+    &__title {
+      margin-bottom: 30px;
+      font-size: 34px;
+    }
+  }
 }
 
 .result-items {
   @include row-flex();
   margin-top: 54px;
 
+  @include sm-block() {
+    margin-top: 2px;
+  }
+
   &__item {
     @include col();
     @include size(4);
+    @include size-md(6);
+    @include size-sm(12);
 
     &--title {
       margin-bottom: 16px;
@@ -76,9 +105,31 @@ body {
       font-size: 54px;
       line-height: 90%;
     }
+
+    @include sm-block() {
+      margin-top: 3px;
+      margin-bottom: 24px;
+
+      &--title {
+        margin-bottom: 4px;
+      }
+
+      &--price {
+        font-size: 22px;
+        line-height: 20px;
+      }
+    }
   }
 
   .btn {
     margin-top: 6px;
+
+    @include md-block() {
+      margin-top: 40px;
+    }
+
+    @include sm-block() {
+      margin-top: 5px;
+    }
   }
 }
