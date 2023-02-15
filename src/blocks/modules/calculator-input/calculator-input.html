@@ -1,4 +1,4 @@
-<div class="calculator-input">
+<div class="calculator-input" id="@@id">
 	<span class="calculator-input__title">
 		@@input-title
 	</span>
@@ -7,7 +7,7 @@
              step="@@step"
              min="@@min"
              max="@@max"
-             placeholder="@@value" id="min"
+             placeholder="@@value"
              class="calculator-input__value--number"
       >
     @@if(context.unit) {
@@ -17,7 +17,8 @@
     }
     @@if(context.label) {
     <span class="calculator-input__value--label">
-				@@label
+				<span id="percent">0</span>
+        <span>@@label</span>
     </span>
     }
       <input type="range"

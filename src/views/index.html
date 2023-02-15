@@ -44,6 +44,7 @@
           "value": "3300000",
           "step": "5000",
           "unit": "₽",
+          "id": "cost",
           })
 
           @@include("../blocks/modules/calculator-input/calculator-input.html", {
@@ -52,7 +53,8 @@
           "max": "2600000",
           "value": "420000",
           "step": "5000",
-          "label": "13%",
+          "label": "%",
+          "id": "fee",
           })
 
           @@include("../blocks/modules/calculator-input/calculator-input.html", {
@@ -62,6 +64,7 @@
           "value": "60",
           "step": "1",
           "unit": "мес.",
+          "id": "term",
           })
         </div>
         <div class="result-items">
